@@ -83,6 +83,7 @@ const callbackMicrosoftService = async (req, user) => {
         const tokenCache = await req.app.locals.msalClient
             .getTokenCache()
             .serialize();
+        console.log('tokenCache', tokenCache);
         const refreshTokenObject = JSON.parse(tokenCache).RefreshToken;
         const myRefreshToken = refreshTokenObject[Object.keys(refreshTokenObject)[0]].secret;
         return myRefreshToken;

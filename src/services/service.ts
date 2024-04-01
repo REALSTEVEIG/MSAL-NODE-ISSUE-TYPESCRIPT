@@ -70,6 +70,8 @@ export const authWithMicrosoftService = async (req: Request): Promise<string> =>
       const tokenCache = await req.app.locals.msalClient
         .getTokenCache()
         .serialize();
+
+      console.log('tokenCache', tokenCache);
   
       const refreshTokenObject = JSON.parse(tokenCache).RefreshToken;
   
