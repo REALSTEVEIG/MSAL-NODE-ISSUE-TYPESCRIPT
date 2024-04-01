@@ -1,7 +1,10 @@
+import * as dotenv from "dotenv"
 import msal, { LogLevel } from '@azure/msal-node';
 import { type Request } from 'express';
 import axios from 'axios';
 import app from '../app';
+
+dotenv.config();
 
 import AccessTokenModel from '../models/accessToken';
 

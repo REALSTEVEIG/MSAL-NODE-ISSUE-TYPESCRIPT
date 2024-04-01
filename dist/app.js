@@ -36,7 +36,7 @@ const PORT = process.env.PORT || 8000;
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
-app.use('/', (req, res) => {
+app.use('/home', (req, res) => {
     return res.json({ message: 'Welcome to calen 360' });
 });
 app.use("/", route_1.calenRouter);

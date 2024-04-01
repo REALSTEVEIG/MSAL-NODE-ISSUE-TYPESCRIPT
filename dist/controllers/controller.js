@@ -5,7 +5,7 @@ const service_1 = require("../services/service");
 const authWithMicrosoftController = async (req, res) => {
     try {
         const url = await (0, service_1.authWithMicrosoftService)(req);
-        res.json(url);
+        res.redirect(url);
     }
     catch (error) {
         console.log('error', error);

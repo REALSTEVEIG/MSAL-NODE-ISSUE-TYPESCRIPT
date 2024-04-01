@@ -11,7 +11,7 @@ import {
   ): Promise<any> => {
     try {
       const url = await authWithMicrosoftService(req);
-      res.json(url);
+      res.redirect(url);
     } catch (error: any) {
         console.log('error', error);
         if (error.response.status !== 200) {

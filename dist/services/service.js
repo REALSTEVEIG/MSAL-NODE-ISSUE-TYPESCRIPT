@@ -27,9 +27,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getAllCalendarServices = exports.callbackMicrosoftService = exports.authWithMicrosoftService = void 0;
+const dotenv = __importStar(require("dotenv"));
 const msal_node_1 = __importStar(require("@azure/msal-node"));
 const axios_1 = __importDefault(require("axios"));
 const app_1 = __importDefault(require("../app"));
+dotenv.config();
 const accessToken_1 = __importDefault(require("../models/accessToken"));
 const msalConfig = {
     auth: {
