@@ -158,7 +158,7 @@ const refreshAccessToken = async (
 };
 
 //Get all calendar service
-const getAllCalendarServices = async (
+export const getAllCalendarServices = async (
   req: Request,
   user: string,
 ): Promise<any> => {
@@ -219,8 +219,4 @@ const getAllCalendarServices = async (
   );
 
   return calendarsResponse.data;
-};
-
-export {
-  getAllCalendarServices,
 };

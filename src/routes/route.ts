@@ -1,13 +1,13 @@
 import express from "express";
 
-const {
+import {
     authWithMicrosoftController,
     callbackMicrosoftController,
-    getAllCalendarsController 
-} = require('../controllers/controller');
+    getAllCalendarsController,
+} from "../controllers/controller"
 
 export const calenRouter = express.Router();
 
 calenRouter.get('/install', authWithMicrosoftController);
 calenRouter.get('/callback', callbackMicrosoftController);
-calenRouter.post("/calendars", getAllCalendarsController);
+calenRouter.get('/calendars', getAllCalendarsController);

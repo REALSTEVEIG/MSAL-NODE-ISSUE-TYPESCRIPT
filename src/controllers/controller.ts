@@ -1,7 +1,7 @@
 import {
-    getAllCalendarServices,
     authWithMicrosoftService,
     callbackMicrosoftService,
+    getAllCalendarServices,
   } from '../services/service';
   import { type Request, type Response } from 'express';
 
